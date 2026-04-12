@@ -4,6 +4,10 @@ wget https://mega.nz/linux/repo/xUbuntu_24.04/amd64/megacmd-xUbuntu_24.04_amd64.
 wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megacmd-xUbuntu_22.04_amd64.deb && sudo apt install "$PWD/megacmd-xUbuntu_22.04_amd64.deb"
 Invoke-WebRequest -Uri "https://mega.nz/MEGAcmdSetup64.exe" -OutFile "MEGAcmdSetup64.exe"
 
+.\MEGAcmdSetup64.exe /S
+
+
+
 mega-help
 Invoke-restmethod https://raw.githubusercontent.com/meganz/MEGAcmd/refs/heads/master/UserGuide.md
 
