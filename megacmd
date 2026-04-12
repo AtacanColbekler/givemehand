@@ -7,6 +7,13 @@ Invoke-WebRequest -Uri "https://mega.nz/MEGAcmdSetup64.exe" -OutFile "MEGAcmdSet
 .\MEGAcmdSetup64.exe /S
 
 
+[Environment]::SetEnvironmentVariable(
+    "Path",
+    [Environment]::GetEnvironmentVariable("Path", "User") + ";$env:LOCALAPPDATA\MEGAcmd",
+    "User"
+)
+
+
 
 mega-help
 Invoke-restmethod https://raw.githubusercontent.com/meganz/MEGAcmd/refs/heads/master/UserGuide.md
